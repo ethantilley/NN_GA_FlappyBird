@@ -1,9 +1,13 @@
-var bird;
+const initPopulation = 100;
+var birds = [];
 var pipes = [];
 
 function setup() {
   createCanvas(640, 480);
-  bird = new Bird();
+
+  for (let i = 0; i < initPopulation; i++) {
+    birds[i] = new Bird();
+  }
   pipes.push(new Pipe());
 }
 
@@ -14,18 +18,21 @@ function draw() {
     pipes[i].show();
     pipes[i].update();
 
-    if (pipes[i].hits(bird)) {
-      console.log("HIT");
-    }
+    // if (pipes[i].hits(bird)) {
+    //   console.log("HIT");
+    // }
 
     if (pipes[i].offscreen()) {
       pipes.splice(i, 1);
     }
   }
 
+for (let bird of birds) {
   bird.think(pipes);
   bird.update();
   bird.show();
+
+}
 
   if (frameCount % 75 == 0) {
     pipes.push(new Pipe());
