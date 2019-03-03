@@ -18,9 +18,12 @@ function draw() {
     pipes[i].show();
     pipes[i].update();
 
-    // if (pipes[i].hits(bird)) {
-    //   console.log("HIT");
-    // }
+    for (let b = birds.length - 1; b >= 0; b--) {
+      if (pipes[i].hits(birds[b])) {
+        birds.splice(b,1);
+      }
+    }
+
 
     if (pipes[i].offscreen()) {
       pipes.splice(i, 1);
