@@ -12,7 +12,17 @@ function NextGeneration()
 
 function GatherParentAgent()
 {
-  let parent = random(birdsBackUp);
+  var index = 0;
+  var r = random(1);
+
+  while(r > 0)
+  {
+    r = r - birdsBackUp[index].fitness;
+    index++;
+  }
+  index--;
+
+  let parent = birdsBackUp[index];
   let child = new Bird(parent.brain);
   child.mutate();
   return child;
@@ -21,12 +31,12 @@ function GatherParentAgent()
 function CalcuateFitness()
 {
   let sum = 0;
-  for(let bird of birds)
+  for(let bird of birdsBackUp)
   {
     sum += bird.score;
   }
 
-  for(let bird of birds)
+  for(let bird of birdsBackUp)
   {
     bird.fitness = bird.score / sum;
   }

@@ -188,7 +188,7 @@ test('transpose matrix - (5, 1) to (1, 5)', () => {
     ]
   })
 })
-    
+
 test('mapping with static map', () => {
   let m = new Matrix(3, 3);
   m.data[0] = [1, 2, 3];
@@ -231,7 +231,7 @@ test('error handling of addition when columns and rows of A don\'t match columns
   let m2 = new Matrix(3, 4);
   m1.add(m2);
 
-  //Check if the mock console.log has been called 
+  //Check if the mock console.log has been called
   expect(global.console.log).toHaveBeenCalledWith('Columns and Rows of A must match Columns and Rows of B.')
 });
 
@@ -279,7 +279,7 @@ test('printing', () => {
   m1.randomize();
   m1.print();
 
-  //Check if the mock console.table has been called 
+  //Check if the mock console.table has been called
   expect(global.console.table).toHaveBeenCalledWith(m1.data)
 });
 
