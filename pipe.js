@@ -30,6 +30,7 @@ function Pipe() {
 
   this.update = function() {
     this.x -= this.speed;
+    this.speed += 0.005;
   }
 
   this.offscreen = function() {

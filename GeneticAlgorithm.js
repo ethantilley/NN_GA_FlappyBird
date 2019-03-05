@@ -2,6 +2,7 @@
 
 function NextGeneration()
 {
+  console.log('New Generation');
   CalcuateFitness();
 
   for (let i = 0; i < initPopulation; i++) {

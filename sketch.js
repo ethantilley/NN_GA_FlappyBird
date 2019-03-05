@@ -23,7 +23,6 @@ for (let n = 0; n < slider.value(); n++) {
   counter++;
 
   for (var i = pipes.length-1; i >= 0; i--) {
-    pipes[i].show();
     pipes[i].update();
 
     for (let b = birds.length - 1; b >= 0; b--) {
@@ -39,6 +38,13 @@ for (let n = 0; n < slider.value(); n++) {
     }
   }
 
+  for (let i = birds.length - 1; i >= 0; i--) {
+    if (birds[i].offScreen()) {
+      birdsBackUp.push(birds.splice(i,1)[0]);
+
+    }
+  }
+
   for (let bird of birds) {
     bird.think(pipes);
     bird.update();
@@ -47,11 +53,12 @@ for (let n = 0; n < slider.value(); n++) {
 
   if (birds.length === 0) {
     counter = 0;
-    NextGeneration();
     pipes = [];
-    pipes.push(new Pipe());
+    //pipes.push(new Pipe());
+    NextGeneration();
   }
 }
+
 
   // All the display
   background(0);
