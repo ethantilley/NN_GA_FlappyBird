@@ -18,7 +18,7 @@ To run this program, just open up the .html file.
 
 ## Why
 
-I made this program to fimilirise myself with neural networks with AI and better understand genertic algoritim.
+I made this program to put the theory I've learnt into practice, familiarising myself with neural networks and better understand the genertic algoritim.
 
 ## Goals With This Program
 - [ ] Stats display (high score, generation number, etc).
