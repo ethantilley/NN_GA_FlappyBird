@@ -1,4 +1,4 @@
-## NN_GA_FlappyBird
+## [NN_GA_FlappyBird](https://ethantilley.github.io/NN_GA_FlappyBird/)
 Neural Network &amp; Genetic Algorithm used to make agents play Flappy bird and eventually perfect it cause i cant.
 
 ## Built With
@@ -13,7 +13,7 @@ Neural Network &amp; Genetic Algorithm used to make agents play Flappy bird and 
 * **Ethan Tilley** - *Solo Developer* - [@EthanTilley_](https://twitter.com/EthanTilley_)
 
 ## Use
-
+[Open this link](https://ethantilley.github.io/NN_GA_FlappyBird/) to see a live demo of the project!
 To run this program, just open up the .html file.
 
 ## Why
