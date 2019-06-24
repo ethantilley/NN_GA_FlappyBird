@@ -27,6 +27,7 @@ function draw() {
     // if time has passed, creat a new pipe.
     if ( counter % 75 == 0 ) {
       pipes.push( new Pipe() );
+
     }
     counter++;
 

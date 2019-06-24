@@ -30,7 +30,17 @@ function Pipe() {
 
   this.update = function() {
     this.x -= this.speed;
-    this.speed += 0.005;
+    if ( counter % 100 == 0 ) {
+      //console.log("Speed Increased!");
+      this.speed += 0.5;
+      if(this.spacing > 50)
+      {
+        this.spacing -= 30;
+
+      }
+    }
+
+
   }
 
   this.offscreen = function() {
